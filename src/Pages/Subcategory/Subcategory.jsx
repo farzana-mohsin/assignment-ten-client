@@ -10,19 +10,18 @@ const Subcategory = () => {
     fetch("http://localhost:5000/items")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        console.log("subcategory: " + loader);
         const filteredData = data?.filter(
           (item) => item.subcategory_name === loader?.subcategory_name
         );
+
         setSubcategoryData(filteredData);
       });
   }, [loader]);
 
   return (
     <div>
-      {subcategoryData?.map((item) => (
-        <p>{item.item_name}</p>
+      {subcategoryData?.map((item, index) => (
+        <p key={index}>{item.item_name}</p>
       ))}
     </div>
   );
