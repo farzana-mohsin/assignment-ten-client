@@ -14,15 +14,15 @@ const Navbar = () => {
         <NavLink to='/'>Home</NavLink>
       </li>
       <li className='text-white'>
-        <NavLink to='/all'>All Arts & Crafts</NavLink>
+        <NavLink to='/all-items'>All Arts & Crafts</NavLink>
       </li>
       {user && (
         <>
           <li className='text-white'>
-            <NavLink to='/add-craft'>Add Craft Item</NavLink>
+            <NavLink to='/add-item'>Add Craft Item</NavLink>
           </li>
           <li className='text-white'>
-            <NavLink to='/special-deals'>My Arts & Crafts</NavLink>
+            <NavLink to='/my-items'>My Arts & Crafts</NavLink>
           </li>
           {/* <li>
             <NavLink to='/user-profile'>User Profile</NavLink>
@@ -123,7 +123,7 @@ const Navbar = () => {
 
               <button
                 onClick={() => handleSignOut()}
-                className=' bg-orange-400 text-white px-4 py-2 border text-sm rounded-xl ml-2'
+                className='btn bg-orange-400 text-white px-4 py-2 border text-sm rounded-xl ml-2'
               >
                 Sign Out
               </button>
@@ -131,10 +131,14 @@ const Navbar = () => {
           ) : (
             <>
               <Link to='/login'>
-                <button className='btn'>Login</button>
+                <button className='btn  bg-orange-400 text-white px-4 py-2 border text-sm rounded-xl ml-2'>
+                  Login
+                </button>
               </Link>
               <Link to='/register'>
-                <button className='btn'>Register</button>
+                <button className='btn  bg-orange-400 text-white px-4 py-2 border text-sm rounded-xl ml-2 '>
+                  Register
+                </button>
               </Link>
             </>
           )}

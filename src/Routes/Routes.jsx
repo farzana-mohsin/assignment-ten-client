@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import AddCraft from "../Pages/AddCraft/AddCraft";
+import MyCrafts from "../Pages/MyCrafts/MyCrafts";
+import AllCrafts from "../Pages/AllCrafts/AllCrafts";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +25,17 @@ const router = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: "/add-craft",
+        path: "/all-items",
+        element: <AllCrafts></AllCrafts>,
+        loader: () => fetch("http://localhost:5000/items"),
+      },
+      {
+        path: "/add-item",
         element: <AddCraft></AddCraft>,
+      },
+      {
+        path: "/my-items",
+        element: <MyCrafts></MyCrafts>,
       },
     ],
   },
