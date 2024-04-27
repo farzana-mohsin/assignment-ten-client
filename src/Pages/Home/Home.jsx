@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Banner from "../../Components/Banner/Banner";
 
 const Home = () => {
   useEffect(() => {
@@ -11,6 +12,7 @@ const Home = () => {
 
   return (
     <div>
+      <Banner></Banner>
       <h2>this is home</h2>
     </div>
   );

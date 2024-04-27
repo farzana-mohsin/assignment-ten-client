@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root/Root";
 import Home from "../Pages/Home/Home";
-import SignUp from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import AddCraft from "../Pages/AddCraft/AddCraft";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/add-craft",
+        element: <AddCraft></AddCraft>,
       },
     ],
   },

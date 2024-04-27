@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaCrown } from "react-icons/fa";
 
 // import { Link } from "react-router-dom";
 
@@ -9,20 +10,23 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li>
+      <li className='text-white'>
         <NavLink to='/'>Home</NavLink>
+      </li>
+      <li className='text-white'>
+        <NavLink to='/all'>All Arts & Crafts</NavLink>
       </li>
       {user && (
         <>
-          <li>
-            <NavLink to='/special-deals'>All arts</NavLink>
+          <li className='text-white'>
+            <NavLink to='/add-craft'>Add Craft Item</NavLink>
+          </li>
+          <li className='text-white'>
+            <NavLink to='/special-deals'>My Arts & Crafts</NavLink>
           </li>
           {/* <li>
             <NavLink to='/user-profile'>User Profile</NavLink>
           </li> */}
-          <li>
-            <NavLink to='/update-profile'>Update Profile</NavLink>
-          </li>
         </>
       )}
     </>
@@ -40,13 +44,13 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className='navbar bg-base-100 my-4 container mx-auto'>
+      <div className='navbar bg-black my-4 mx-auto '>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div
               tabIndex={0}
               role='button'
-              className='btn btn-ghost lg:hidden'
+              className='btn btn-ghost lg:hidden text-white'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -65,22 +69,25 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className='menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52'
+              className='menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-black rounded-box w-52 text-black'
             >
               {navLinks}
             </ul>
           </div>
-          <div className='flex items-center justify-center w-12 h-12 rounded-full bg-emerald-400 text-xl text-white font-bold'>
-            {/* <MdOutlineRealEstateAgent /> */}
+          <h1 className='animate__animated animate__fadeInLeft text-2xl md:text-3xl font-bold text-white pl-1'>
+            Crown
+          </h1>
+          <div className='flex items-center justify-center text-4xl font-bold text-orange-400 ml-2'>
+            <FaCrown />
           </div>
-          <h1 className='animate__animated animate__fadeInLeft text-2xl md:text-3xl font-bold text-emerald-500 pl-1'>
-            Remax Realty
+          <h1 className='animate__animated animate__fadeInLeft text-2xl md:text-3xl font-bold text-white pl-1'>
+            Art
           </h1>
         </div>
-        <div className='navbar-center hidden lg:flex'>
-          <ul className='menu menu-horizontal px-1'>{navLinks}</ul>
+        <div className='navbar-end hidden lg:flex'>
+          <ul className='flex flex-row px-1 space-x-5'>{navLinks}</ul>
         </div>
-        <div className='navbar-end flex flex-col md:flex-row items-center'>
+        <div className=' flex flex-col md:flex-row '>
           {/* <div
             tabIndex={0}
             role='button'
@@ -116,15 +123,20 @@ const Navbar = () => {
 
               <button
                 onClick={() => handleSignOut()}
-                className=' bg-emerald-400 text-white px-4 py-2 border text-sm rounded-xl ml-2'
+                className=' bg-orange-400 text-white px-4 py-2 border text-sm rounded-xl ml-2'
               >
                 Sign Out
               </button>
             </div>
           ) : (
-            <Link to='/login'>
-              <button className='btn'>Login</button>
-            </Link>
+            <>
+              <Link to='/login'>
+                <button className='btn'>Login</button>
+              </Link>
+              <Link to='/register'>
+                <button className='btn'>Register</button>
+              </Link>
+            </>
           )}
         </div>
       </div>
