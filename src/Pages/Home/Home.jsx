@@ -27,6 +27,7 @@ const Home = () => {
         <Link
           to={`/subcategories/${subcategory._id}`}
           key={index}
+          subcategory={subcategory}
         >
           <button className='btn mr-2'>{subcategory.subcategory_name}</button>
         </Link>
