@@ -10,6 +10,7 @@ import CraftDetails from "../Components/CraftDetails/CraftDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateCoffee from "../../../../express-js/coffee-store/coffee-store-client/src/Components/UpdateCoffee";
 import UpdateCraft from "../Pages/UpdateCraft/UpdateCraft";
+import SubCategories from "../Pages/SubCategories/SubCategories";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,12 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/items/${params.id}`),
+      },
+      {
+        path: "/subcategories/:id",
+        element: <SubCategories></SubCategories>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/subcategories/${params.id}`),
       },
     ],
   },
