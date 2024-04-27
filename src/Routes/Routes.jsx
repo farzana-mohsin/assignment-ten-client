@@ -6,6 +6,10 @@ import Register from "../Pages/Register/Register";
 import AddCraft from "../Pages/AddCraft/AddCraft";
 import MyCrafts from "../Pages/MyCrafts/MyCrafts";
 import AllCrafts from "../Pages/AllCrafts/AllCrafts";
+import CraftDetails from "../Components/CraftDetails/CraftDetails";
+import PrivateRoutes from "./PrivateRoutes";
+import UpdateCoffee from "../../../../express-js/coffee-store/coffee-store-client/src/Components/UpdateCoffee";
+import UpdateCraft from "../Pages/UpdateCraft/UpdateCraft";
 
 const router = createBrowserRouter([
   {
@@ -31,11 +35,40 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-item",
-        element: <AddCraft></AddCraft>,
+        element: (
+          <PrivateRoutes>
+            <AddCraft></AddCraft>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/my-items",
-        element: <MyCrafts></MyCrafts>,
+        element: (
+          <PrivateRoutes>
+            <MyCrafts></MyCrafts>
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("http://localhost:5000/items"),
+      },
+      {
+        path: "/item-details/:id",
+        element: (
+          <PrivateRoutes>
+            <CraftDetails></CraftDetails>
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/items/${params.id}`),
+      },
+      {
+        path: "/update-craft/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdateCraft></UpdateCraft>
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/items/${params.id}`),
       },
     ],
   },

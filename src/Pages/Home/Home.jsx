@@ -3,7 +3,7 @@ import Banner from "../../Components/Banner/Banner";
 
 const Home = () => {
   useEffect(() => {
-    fetch("https://assignment-ten-server-lilac.vercel.app/items")
+    fetch("http://localhost:5000/items")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

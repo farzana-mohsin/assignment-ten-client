@@ -1,16 +1,22 @@
-import { useContext, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../Providers/AuthProvider";
+const UpdateCraft = () => {
+  const loader = useLoaderData();
+  const {
+    _id,
+    image,
+    item_name,
+    subcategory_name,
+    short_description,
+    price,
+    rating,
+    customization,
+    processing_time,
+    stock_status,
+    user_name,
+  } = loader;
 
-const AddCraft = () => {
-  const { user } = useContext(AuthContext);
-  // const [open, setOpen] = useState(false);
-
-  // const handleOpen = () => {
-  //   setOpen(!open);
-  // };
-
-  const handleAddCraft = (event) => {
+  const handleUpdateCraft = (event) => {
     event.preventDefault();
 
     const form = event.target;
@@ -24,10 +30,8 @@ const AddCraft = () => {
     const processingTime = form.processingTime.value;
     const stockStatus = form.stockStatus.value;
     const name = form.name.value;
-    const email = user.email;
-    console.log(user);
 
-    const newCraft = {
+    const updateCraft = {
       image,
       item_name: itemName,
       subcategory_name: subcategoryName,
@@ -38,16 +42,15 @@ const AddCraft = () => {
       processing_time: processingTime,
       stock_status: stockStatus,
       user_name: name,
-      user_email: email,
     };
-    console.log(newCraft);
+    console.log(updateCraft);
 
-    fetch("http://localhost:5000/items", {
-      method: "POST",
+    fetch(`http://localhost:5000/items/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newCraft),
+      body: JSON.stringify(updateCraft),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -55,7 +58,7 @@ const AddCraft = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Item added successfully",
+            text: "Item updated successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
@@ -66,15 +69,16 @@ const AddCraft = () => {
   return (
     <div className='bg-[#F4F3F0] p-24 w-1/2 mx-auto'>
       <h2 className='text-4xl font-extrabold mb-10 text-center'>
-        Add Craft Item
+        Update Your Craft
       </h2>
-      <form onSubmit={handleAddCraft}>
+      <form onSubmit={handleUpdateCraft}>
         {/* form - name and quantity row */}
         <div className='md:flex gap-4 mb-6'>
           <div className='form-control md:w-1/2'>
             <label className='label'>Image URL</label>
             <label className='input-group'>
               <input
+                defaultValue={image}
                 name='image'
                 type='text'
                 placeholder='image URL'
@@ -86,6 +90,7 @@ const AddCraft = () => {
             <label className='label'>Craft Name</label>
             <label className='input-group'>
               <input
+                defaultValue={item_name}
                 name='itemName'
                 type='text'
                 placeholder='Item name'
@@ -101,6 +106,7 @@ const AddCraft = () => {
             <select
               name='subcategory'
               id='subcategory'
+              defaultValue={subcategory_name}
             >
               <option
                 className='input input-bordered w-full h-full'
@@ -119,6 +125,7 @@ const AddCraft = () => {
             <label className='label'>Description</label>
             <label className='input-group'>
               <input
+                defaultValue={short_description}
                 name='shortDescription'
                 type='text'
                 placeholder='Description'
@@ -133,6 +140,7 @@ const AddCraft = () => {
             <label className='label'>Price</label>
             <label className='input-group'>
               <input
+                defaultValue={price}
                 name='price'
                 type='text'
                 placeholder='Price'
@@ -144,6 +152,7 @@ const AddCraft = () => {
             <label className='label'>Rating</label>
             <label className='input-group'>
               <input
+                defaultValue={rating}
                 name='rating'
                 type='text'
                 placeholder='Rating'
@@ -157,6 +166,7 @@ const AddCraft = () => {
           <div className='form-control md:w-1/2'>
             <label className='label'>Customization</label>
             <select
+              defaultValue={customization}
               name='customization'
               id='customization'
             >
@@ -173,6 +183,7 @@ const AddCraft = () => {
             <label className='label'>Processing Time</label>
             <label className='input-group'>
               <input
+                defaultValue={processing_time}
                 name='processingTime'
                 type='text'
                 placeholder='Processing time'
@@ -186,6 +197,7 @@ const AddCraft = () => {
           <div className='form-control md:w-1/2'>
             <label className='label'>Stock Status</label>
             <select
+              defaultValue={stock_status}
               name='stockStatus'
               id='stockStatus'
             >
@@ -202,6 +214,7 @@ const AddCraft = () => {
             <label className='label'>Username</label>
             <label className='input-group'>
               <input
+                defaultValue={user_name}
                 name='name'
                 type='text'
                 placeholder='Username'
@@ -211,18 +224,18 @@ const AddCraft = () => {
           </div>
         </div>
         {/* <div className='mb-6'>
-          <div className='form-control w-full '>
-            <label className='label'>Photo URL</label>
-            <label className='input-group'>
-              <input
-                name='email'
-                type='text'
-                placeholder='Email'
-                className='input input-bordered w-full'
-              />
-            </label>
-          </div>
-        </div> */}
+      <div className='form-control w-full '>
+        <label className='label'>Photo URL</label>
+        <label className='input-group'>
+          <input
+            name='email'
+            type='text'
+            placeholder='Email'
+            className='input input-bordered w-full'
+          />
+        </label>
+      </div>
+    </div> */}
 
         <input
           type='submit'
@@ -234,4 +247,4 @@ const AddCraft = () => {
   );
 };
 
-export default AddCraft;
+export default UpdateCraft;

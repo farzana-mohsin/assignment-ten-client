@@ -40,16 +40,22 @@ const Login = () => {
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        toast.success("You have logged in successfully!");
+        setTimeout(function () {
+          navigate(from);
+        }, 2000);
       })
       .catch((error) => console.error(error));
   };
 
   const handleGithubSignIn = () => {
     signInWithGithub()
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        toast.success("You have logged in successfully!");
+        setTimeout(function () {
+          navigate(from);
+        }, 2000);
       })
       .catch((error) => console.error(error));
   };

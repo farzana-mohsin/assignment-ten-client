@@ -1,26 +1,30 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import SingleCraft from "../../Components/SingleCraft/SingleCraft";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const AllCrafts = () => {
   const loader = useLoaderData();
   const [allItems, setAllItems] = useState([]);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     const filteredItems = loader?.filter(
-      (item) => item.user_email === "farzanamohsinmohona@gmail.com"
+      (item) =>
+        item.user_email === "farzanamohsinmohona@gmail.com" ||
+        item.user_email === user?.email
     );
     setAllItems(filteredItems);
-  }, [loader]);
+  }, [loader, user]);
 
   return (
     <div>
       <h2>all crafts {allItems?.length}</h2>
       <div className='bg-gray-100'>
-        {allItems.map((oneItem, index) => (
+        {allItems.map((item, index) => (
           <SingleCraft
             key={index}
-            oneItem={oneItem}
+            item={item}
           ></SingleCraft>
         ))}
       </div>
