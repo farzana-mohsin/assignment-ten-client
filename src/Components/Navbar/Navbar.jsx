@@ -94,30 +94,11 @@ const Navbar = () => {
           <ul className='flex flex-row px-1 space-x-5'>{navLinks}</ul>
         </div>
         <div className=' flex flex-col md:flex-row '>
-          {/* <div
-            tabIndex={0}
-            role='button'
-            className='btn btn-ghost btn-circle avatar'
-          ></div> */}
-
           {user ? (
             <div className='flex md:flex-row items-center gap-2'>
-              {/* {user?.displayName || user?.uid.slice(0, 8) || "user not found"}
-              <img
-                className='w-10 rounded-full hidden md:block'
-                alt='image not found'
-                src={
-                  user?.photoURL ||
-                  "https://i.ibb.co/YDgsXWt/360-F-229758328-7x8jw-Cwjt-BMm-C6rg-Fz-LFh-Zo-Ep-Lob-B6-L8.jpg"
-                }
-              /> */}
               <div
                 className='tooltip tooltip-bottom border-none bg-none rounded-full mx-3'
-                data-tip={
-                  user?.displayName || (
-                    <button onClick={() => handleSignOut()}>Sign Out</button>
-                  )
-                }
+                data-tip={user?.displayName || "user not found"}
               >
                 <button className='rounded-full bg-none border-none w-12'>
                   <img
@@ -130,6 +111,13 @@ const Navbar = () => {
                   />
                 </button>
               </div>
+
+              <button
+                className='btn bg-orange-400 text-white md:px-4 md:py-2 border text-sm rounded-xl mr-3'
+                onClick={() => handleSignOut()}
+              >
+                Sign Out
+              </button>
             </div>
           ) : (
             <div className='flex flex-row'>
@@ -146,7 +134,37 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        <label className='cursor-pointer grid place-items-center'>
+
+        {/* <div className='dropdown dropdown-end'>
+          <div
+            tabIndex={0}
+            role='button'
+            className='btn btn-ghost btn-circle avatar'
+          >
+            <div className='w-10 rounded-full'>
+              <img
+                alt='Tailwind CSS Navbar component'
+                src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
+              />
+            </div>
+          </div>
+          <ul
+            tabIndex={0}
+            className='mt-3 z-[2] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52'
+          >
+            <li>
+              <a className='justify-between'>Profile</a>
+            </li>
+            <li>
+              <a>Settings</a>
+            </li>
+            <li>
+              <a>Logout</a>
+            </li>
+          </ul>
+        </div> */}
+
+        <label className='cursor-pointer grid place-items-center md:ml-6'>
           <input
             onChange={handleToggle}
             type='checkbox'
