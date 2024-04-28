@@ -1,75 +1,67 @@
+import React, { useRef, useState } from "react";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useRef } from "react";
-import "swiper/css/navigation";
+
+// Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import "./styles.css";
+
+// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const Banner = () => {
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
   return (
-    <div className='my-8 h-min'>
+    <div className=' w-full'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
         className='mySwiper'
       >
         <SwiperSlide>
-          {" "}
           <img
-            className='mx-auto w-full h-1/4'
-            src='https://i.ibb.co/GRnRZYP/istockphoto-1436217023-612x612.webp'
-          ></img>
+            className='md:h-[1000px] mx-auto w-full object-cover'
+            src='https://i.ibb.co/1vjKKmJ/Cm-Dr5-EYVYAE6n3-P.jpg'
+            alt=''
+          />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className='mx-auto w-full h-1/4'
-            src='https://i.ibb.co/GRnRZYP/istockphoto-1436217023-612x612.webp'
-          ></img>
+            className='md:h-[1000px] mx-auto w-full object-cover'
+            src='https://i.ibb.co/gP8CGft/v1-txt2img-50f1a01c-e2b6-426a-9a19-0c24174c9b7c.png'
+            alt=''
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className='md:h-[1000px] mx-auto w-full object-cover'
+            src='https://i.ibb.co/64H3mnX/shutterstock-410271079-1024x1024.webp'
+            alt=''
+          />
         </SwiperSlide>
         <SwiperSlide>
           {" "}
           <img
-            className='mx-auto w-full h-1/4'
-            src='https://i.ibb.co/QJJQwN2/02C.jpg'
-          ></img>
+            className='md:h-[1000px] mx-auto w-full object-cover'
+            src='https://i.ibb.co/xC6tXzB/81z-Ym-WDc8e-L-AC-UF894-1000-QL80.jpg'
+            alt=''
+          />
         </SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
+        {/* <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
         <SwiperSlide>Slide 7</SwiperSlide>
         <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-        <div
-          className='autoplay-progress'
-          slot='container-end'
-        >
-          <svg
-            viewBox='0 0 48 48'
-            ref={progressCircle}
-          >
-            <circle
-              cx='24'
-              cy='24'
-              r='20'
-            ></circle>
-          </svg>
-          <span ref={progressContent}></span>
-        </div>
+        <SwiperSlide>Slide 9</SwiperSlide> */}
       </Swiper>
     </div>
   );
