@@ -15,8 +15,12 @@ const SingleCraft = ({ item }) => {
           />
         </figure>
         <div className=''>
-          <h2 className='card-title'>{item_name}</h2>
-          <p>{short_description}</p>
+          <tr key={index}>
+            <td>{index + 1}</td>
+            <td>{recipe_name}</td>
+            <td>{preparing_time}</td>
+            <td>{calories}</td>
+          </tr>
           <div className=''>
             <Link to={`/item-details/${_id}`}>
               <button className='btn bg-orange-400 text-white px-4 py-2 border text-sm rounded-xl ml-2'>
