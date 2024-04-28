@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const SixData = ({ item }) => {
-  const { item_name, rating, subcategory_name, image, _id } = item;
+  const { item_name, subcategory_name, image, _id } = item;
 
   return (
     <div>
@@ -27,6 +28,10 @@ const SixData = ({ item }) => {
       </div>
     </div>
   );
+};
+
+SixData.propTypes = {
+  item: PropTypes.object.isRequired,
 };
 
 export default SixData;

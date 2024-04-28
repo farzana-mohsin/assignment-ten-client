@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Banner from "../../Components/Banner/Banner";
-import { Link } from "react-router-dom";
 import ExtraSection from "../../Components/ExtraSection/ExtraSection";
 import SixData from "../../Components/SixData/SixData";
 import Subcategories from "../../Components/Subcategories/Subcategories";

@@ -25,7 +25,7 @@ const AllCrafts = () => {
       <p className='text-md opacity-60 mx-auto max-w-2xl text-center my-8'>
         The artist is a receptacle for emotions that come from all over the
         place: from the sky, from the earth, from a scrap of paper, from a
-        passing shape, and from a spider's web.
+        passing shape, and from a spider&apos;s web.
       </p>
       <div className='bg-orange-100 mx-auto container md:w-1/2 space-x-10 gap-10 table md:text-lg'>
         {allItems.map((item, index) => (

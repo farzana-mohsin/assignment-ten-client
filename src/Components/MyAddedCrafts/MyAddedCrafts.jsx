@@ -1,18 +1,11 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { BiCustomize } from "react-icons/bi";
 
 const MyAddedCrafts = ({ item, myItems, setMyItems }) => {
-  const {
-    image,
-    item_name,
-    price,
-    rating,
-    customization,
-    stock_status,
-    _id,
-    short_description,
-  } = item;
+  const { image, item_name, price, rating, customization, stock_status, _id } =
+    item;
 
   const handleDelete = (_id) => {
     console.log(_id);
@@ -51,25 +44,49 @@ const MyAddedCrafts = ({ item, myItems, setMyItems }) => {
   };
 
   return (
-    <div className='w-1/2 mx-auto my-5 py-10 '>
-      <div className='card lg:card-side  mb-8'>
-        <figure className='shadow-xl mx-8 rounded-xl'>
-          <img
-            className='rounded-xl'
-            src={image}
-            alt='craft item'
-          />
-        </figure>
-        <div className=''>
-          <h2 className='card-title'>{item_name}</h2>
-          <p>{short_description}</p>
-          <div className=''>
+    <div className='card w-[80%] bg-base-100 shadow-2xl h-fit mb-10'>
+      {/* <figure className='px-5 pt-10'>
+        <img
+          src={image}
+          alt='Shoes'
+          className='rounded-xl h-[400px] object-cover pt-14'
+        />
+      </figure> */}
+      <div className='flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg mx-auto my-10'>
+        <div>
+          <span className='indicator-item indicator-end  text-lg rounded-xl bg-orange-400 text-white px-4 pb-4 pt-2'>
+            {stock_status}
+          </span>
+          <div className='mx-auto flex items-center justify-center'>
+            <img
+              src={image}
+              alt=''
+              className='object-cover w-full mb-4 h-60 sm:h-96 bg-gray-500'
+            />
+          </div>
+          <h2 className='card-title text-2xl font-bold my-5'>{item_name}</h2>
+          <div className='flex justify-between  space-x-20'>
+            <p>
+              {" "}
+              <span className='font-bold'>Price</span> ${price}
+            </p>
+            <p className=' '>
+              <span className='font-bold'>Customization option</span>{" "}
+              {customization}
+            </p>
+            <p>
+              <span className='font-bold'>Rating</span> {rating}
+            </p>
+          </div>
+          <div className='my-10 flex justify-between'>
             <Link to={`/update-craft/${_id}`}>
-              <button className='btn'>Update Craft</button>
+              <button className='bg-orange-400 text-white md:px-4 md:py-2 border-2 border-white text-sm rounded-xl mr-3 btn'>
+                Update Craft
+              </button>
             </Link>
             <button
               onClick={() => handleDelete(_id)}
-              className='btn'
+              className='btn bg-orange-400 text-white md:px-4 md:py-2 border-2 border-white text-sm rounded-xl mr-3n'
             >
               Delete Craft
             </button>
