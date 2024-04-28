@@ -5,7 +5,7 @@ const SixData = ({ item }) => {
 
   return (
     <div>
-      <div className='card w-96 bg-base-100 shadow-2xl h-[80%]'>
+      <div className='card lg:w-96 bg-base-100 shadow-2xl md:h-[80%] mb-10'>
         <figure className='px-5 pt-10'>
           <img
             src={image}

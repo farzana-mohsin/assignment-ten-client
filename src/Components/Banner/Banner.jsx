@@ -39,16 +39,16 @@ const Banner = () => {
             <div className='hero-overlay bg-opacity-15'></div>
             <div className='hero-content text-center text-neutral-content'>
               <div className='max-w-md'>
-                <h1 className='mb-5 text-5xl font-bold text-white'>
+                <h1 className='mb-5 text-lg md:text-5xl font-bold text-white'>
                   Hello there
                 </h1>
-                <p className='mb-5 text-white'>
+                <p className='text-sm md:mb-5 text-white'>
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
                 </p>
                 <Link to='/all-items'>
-                  <button className='bg-orange-400 text-white md:px-7 md:py-3 border text-lg rounded-xl mr-3  hover:bg-amber-400'>
+                  <button className='bg-orange-400 text-white px-7 py-3 border md:text-lg rounded-xl mr-3  hover:bg-amber-400'>
                     Explore All Crafts
                   </button>
                 </Link>
