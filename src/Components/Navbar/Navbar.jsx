@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className='navbar md:px-10 py-7 bg-black mx-auto '>
+      <div className='navbar md:px-10 py-5 bg-black mx-auto '>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div

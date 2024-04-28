@@ -60,116 +60,31 @@ const Register = () => {
       {/* <Helmet> */}
       <title>Remax Realty | Register</title>
       {/* </Helmet> */}
-      {/* <div className='hero min-h-screen bg-base-200'>
-        <div className='hero-content flex-col lg:flex-row-reverse'>
-          <div className='text-center lg:text-left'>
-            <h1 className='text-5xl font-bold'>Register now!</h1>
-          </div>
-          <div className='card shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
-            <form
-              onSubmit={handleRegister}
-              className='card-body'
-            >
-              <div className='form-control'>
-                <label className='label'>
-                  <span className='label-text'>Name</span>
-                </label>
-                <input
-                  name='name'
-                  type='text'
-                  placeholder='name'
-                  className='input input-bordered'
-                  required
-                />
-              </div>
-              <div className='form-control'>
-                <label className='label'>
-                  <span className='label-text'>Email</span>
-                </label>
-                <input
-                  name='email'
-                  type='email'
-                  placeholder='email'
-                  className='input input-bordered'
-                  required
-                />
-              </div>
-              <div className='form-control'>
-                <label className='label'>
-                  <span className='label-text'>Photo URL</span>
-                </label>
-                <input
-                  name='photo'
-                  type='text'
-                  placeholder='photo URL'
-                  className='input input-bordered'
-                />
-              </div>
-              <div className='form-control'>
-                <label className='label'>
-                  <span className='label-text'>Password</span>
-                </label>
-                <input
-                  name='password'
-                  type='password'
-                  placeholder='password'
-                  className='input input-bordered'
-                  required
-                />
-                <label className='label'></label>
-              </div>
-              <div className='form-control mt-6'>
-                <button className='btn btn-primary'>Register</button>
-              </div>
-              <p>
-                Already a member ? Please{" "}
-                <Link
-                  className='text-blue-700 font-bold mb-0'
-                  to='/login'
-                >
-                  Login
-                </Link>{" "}
-              </p>
-            </form>
-            {registerError && (
-              <p className='text-red-600 pb-3 ml-7 mt-0 mb-6'>
-                {registerError}
-              </p>
-            )}
 
-            {registerSuccess && (
-              <p className='text-green-600 text-xl pb-3 ml-7 mt-0 mb-6'>
-                {registerSuccess}
-              </p>
-            )}
-          </div>
-        </div>
-      </div> */}
-
-      <div className='h-screen  lg:h-[calc(100vh-220px)] w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-900 text-gray-100 mx-auto my-5'>
+      <div className='  md:h-[calc(100vh-295px)] w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-amber-950 text-gray-100 mx-auto my-3'>
         <h2 className='mb-3 text-3xl font-semibold text-center'>
           Register here!
         </h2>
-        <p className='text-sm text-center text-gray-400 mb-5'>
+        <p className='text-sm text-center text-orange-300 mb-5'>
           Already have an account? Please login{" "}
           <Link
             to='/login'
-            className='focus:underline hover:underline font-bold text-emerald-400'
+            className='focus:underline hover:underline font-bold text-white'
           >
             here
           </Link>
         </p>
 
-        <div className='flex items-center w-full my-2'>
+        <div className='flex items-center w-full'>
           <hr className='w-full text-gray-400' />
-          <p className='px-3 text-gray-400'>OR</p>
+          <p className='px-3 text-gray-400 my-0'>OR</p>
           <hr className='w-full text-gray-400' />
         </div>
         <form
           onSubmit={handleRegister}
-          className='card-body'
+          className='card-body py-0'
         >
-          <div className='form-control'>
+          <div className='form-control py-0'>
             <label className='label'>
               <span className='label-text text-white'>Name</span>
             </label>
@@ -177,7 +92,7 @@ const Register = () => {
               name='name'
               type='text'
               placeholder='name'
-              className='w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-emerald-400'
+              className='w-full px-3 py-2 border rounded-md border-orange-600 bg-gray-100 text-gray-900 focus:border-orange-600'
               required
             />
           </div>
@@ -189,7 +104,7 @@ const Register = () => {
               name='email'
               type='email'
               placeholder='email'
-              className='w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-emerald-400'
+              className='w-full px-3 py-2 border rounded-md border-orange-600 bg-gray-100 text-gray-900 focus:border-amber-800'
               required
             />
           </div>
@@ -201,7 +116,7 @@ const Register = () => {
               name='image'
               type='text'
               placeholder='photo URL'
-              className='w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-emerald-400'
+              className='w-full px-3 py-2 border rounded-md border-orange-600 bg-gray-100 text-gray-900 focus:border-amber-800'
               required
             />
           </div>
@@ -213,7 +128,7 @@ const Register = () => {
               name='password'
               type={showPassword ? "text" : "password"}
               placeholder='password'
-              className='w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-emerald-400'
+              className='w-full px-3 py-2 border rounded-md border-orange-600 bg-gray-100 text-gray-900 focus:border-amber-800'
               required
             />
             <span
@@ -223,8 +138,8 @@ const Register = () => {
               {showPassword ? <IoIosEyeOff /> : <MdRemoveRedEye />}
             </span>
           </div>
-          <div className='form-control py-7 mt-5 lg:mb-0'>
-            <button className='w-full px-8 py-3 font-semibold rounded-xl bg-emerald-400 text-white'>
+          <div className='form-control py-3'>
+            <button className='w-full px-8 py-3  font-semibold rounded-xl bg-orange-400 hover:bg-amber-800'>
               Register
             </button>
           </div>

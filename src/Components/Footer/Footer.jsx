@@ -3,8 +3,8 @@ import { FaCrown } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <footer className='px-4 divide-y bg-yellow-950 text-gray-100'>
-        <div className='container flex flex-col justify-center lg:justify-between py-5 mx-auto space-y-8 lg:flex-row lg:space-y-0'>
+      <footer className='px-4 divide-y bg-black text-gray-100'>
+        <div className='container flex flex-col justify-center lg:justify-between py-3 mx-auto space-y-8 lg:flex-row lg:space-y-0'>
           <div className='lg:w-1/3'>
             <a
               rel='noopener noreferrer'
@@ -145,7 +145,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='py-6 text-sm text-center text-gray-400'>
+        <div className='py-4 text-sm text-center text-gray-400'>
           © 2024 Crown Art. All rights reserved.
         </div>
       </footer>
