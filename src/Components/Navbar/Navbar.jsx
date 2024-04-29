@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaCrown } from "react-icons/fa";
-import { Fade } from "react-awesome-reveal";
 
 // import { Link } from "react-router-dom";
 
@@ -26,7 +25,7 @@ const Navbar = () => {
       {user && (
         <>
           <li className='text-white'>
-            <NavLink to='/add-item'>Add Craft Item</NavLink>
+            <NavLink to='/add-item'>Add Craft</NavLink>
           </li>
           <li className='text-white'>
             <NavLink to='/my-items'>My Arts & Crafts</NavLink>
