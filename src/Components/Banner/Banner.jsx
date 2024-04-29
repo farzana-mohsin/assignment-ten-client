@@ -1,5 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,11 +14,20 @@ import "./styles.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 const Banner = () => {
+  // const handleType = (count: number) => {
+  //   // access word count number
+  //   console.log(count);
+  // };
+
+  // const handleDone = () => {
+  //   console.log(`Done after 5 loops!`);
+  // };
+
   return (
     <div className=' w-full'>
       <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
+        // spaceBetween={30}
+        // centeredSlides={true}
         // autoplay={{
         //   delay: 4000,
         //   disableOnInteraction: false,
@@ -38,7 +49,7 @@ const Banner = () => {
           >
             <div className='hero-overlay bg-opacity-15'></div>
             <div className='hero-content text-center text-neutral-content'>
-              <div className='max-w-md'>
+              {/* <div className='max-w-md'>
                 <h1 className='mb-5 text-lg md:text-5xl font-bold text-white'>
                   Hello there
                 </h1>
@@ -52,6 +63,42 @@ const Banner = () => {
                     Explore All Crafts
                   </button>
                 </Link>
+              </div> */}
+              <div className='App'>
+                <h1
+                  className=' mx-auto font-bold md:text-4xl text-white py-16'
+                  // style={{
+                  //   paddingTop: "5rem",
+                  //   margin: "auto 0",
+                  //   fontWeight: "bold",
+                  //   fontSize: "md:4rem",
+                  //   color: "white",
+                  // }}
+                >
+                  {" "}
+                  Resurrecting time tested skills
+                  <p className='text-yellow-300 font-bold'>
+                    {/* Style will be inherited from the parent element */}
+                    <Typewriter
+                      words={[
+                        "Pursue",
+                        "your",
+                        "passion",
+                        "create",
+                        "your",
+                        "life!",
+                      ]}
+                      loop={10}
+                      cursor
+                      cursorStyle='_'
+                      typeSpeed={50}
+                      deleteSpeed={50}
+                      delaySpeed={3000}
+                      // onLoopDone={handleDone}
+                      // onType={handleType}
+                    />
+                  </p>
+                </h1>
               </div>
             </div>
           </div>
@@ -66,12 +113,14 @@ const Banner = () => {
           >
             <div className='hero-overlay bg-opacity-30'></div>
             <div className='hero-content text-center text-neutral-content'>
-              <div className='max-w-md'>
-                <h1 className='mb-5 text-5xl font-bold'>Hello there</h1>
+              <div className='max-w-xl'>
+                <h1 className='mb-5 text-4xl font-bold'>
+                  A Legendary Community
+                </h1>
                 <p className='mb-5'>
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  My favourite part of my day is talking to students; it’s so
+                  exciting as each student is completely unique with their own
+                  story and their own motivations for taking art classes.
                 </p>
               </div>
             </div>
@@ -87,13 +136,15 @@ const Banner = () => {
           >
             <div className='hero-overlay bg-opacity-30'></div>
             <div className='hero-content text-center text-neutral-content'>
-              <div className='max-w-md'>
-                <h1 className='mb-5 text-5xl font-bold'>Hello there</h1>
-                <p className='mb-5'>
+              <div className='max-w-lg'>
+                <h1 className='mb-5 text-4xl font-bold text-white'>
+                  Experience for the artist in you
+                </h1>
+                {/* <p className='mb-5'>
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
                   aut repudiandae et a id nisi.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
@@ -109,12 +160,14 @@ const Banner = () => {
           >
             <div className='hero-overlay bg-opacity-30'></div>
             <div className='hero-content text-center text-neutral-content'>
-              <div className='max-w-md'>
-                <h1 className='mb-5 text-5xl font-bold'>Hello there</h1>
+              <div className='max-w-xl text-white'>
+                <h1 className='mb-5 text-4xl font-bold'>
+                  Founded by artists & supporting artists since 1980
+                </h1>
                 <p className='mb-5'>
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  At Crown Art School we are teaching different art techniques
+                  to students of all ages. During my lessons I try to bring out
+                  the inner artists of students to help build their skills.
                 </p>
               </div>
             </div>
