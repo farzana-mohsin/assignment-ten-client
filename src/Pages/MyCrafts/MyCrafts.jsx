@@ -20,7 +20,7 @@ const MyCrafts = () => {
       <h1 className='text-3xl md:text-5xl font-bold mt-10 mb-0 lg:my-20 text-center'>
         My Arts & Crafts Collection
       </h1>
-      <p className='text-lg opacity-60 mt-10 mb-0 lg:my-20 text-center w-1/2 mx-auto'>
+      <p className='md:text-lg opacity-60 my-8 lg:my-20 text-center md:w-1/2 mx-auto'>
         It if sometimes furnished unwilling as additions blessing resolved
         peculiar graceful at really ladies in as elinor opinions age properly
         extended.
