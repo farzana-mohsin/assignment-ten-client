@@ -55,25 +55,25 @@ const UpdateCraft = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount) {
           Swal.fire({
             title: "Success!",
             text: "Item updated successfully",
             icon: "success",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Go Back",
           });
         }
       });
   };
 
   return (
-    <div className='bg-[#F4F3F0] p-24 w-1/2 mx-auto'>
-      <h2 className='text-4xl font-extrabold mb-10 text-center'>
+    <div className='bg-[#F4F3F0] p-24 lg:w-1/2 mx-auto h-fit py-7 lg:py-3 lg:my-5 border border-yellow-700'>
+      <h2 className='text-4xl font-extrabold mb-6 text-center mt-0'>
         Update Your Craft
       </h2>
       <form onSubmit={handleUpdateCraft}>
         {/* form - name and quantity row */}
-        <div className='md:flex gap-4 mb-6'>
+        <div className='md:flex gap-4 md:mb-6'>
           <div className='form-control md:w-1/2'>
             <label className='label'>Image URL</label>
             <label className='input-group'>
@@ -82,7 +82,7 @@ const UpdateCraft = () => {
                 name='image'
                 type='text'
                 placeholder='image URL'
-                className='input input-bordered w-full'
+                className='input input-bordered w-full text-slate-400'
               />
             </label>
           </div>
@@ -94,22 +94,44 @@ const UpdateCraft = () => {
                 name='itemName'
                 type='text'
                 placeholder='Item name'
-                className='input input-bordered w-full'
+                className='input input-bordered w-full text-slate-400'
               />
             </label>
           </div>
         </div>
         {/* form - supplier and taste row */}
-        <div className='md:flex gap-4 mb-6'>
+        <div className='md:flex gap-4 md:mb-6'>
           <div className='form-control md:w-1/2'>
-            <label className='label'>Subcategory Name</label>
+            <label className='form-control w-full'>
+              {/* <div className='label'> */}
+              <span className='label'>Subcategory Name</span>
+              {/* </div> */}
+              <select
+                className='select select-bordered'
+                name='subcategory'
+                defaultValue={subcategory_name}
+              >
+                <option
+                  disabled
+                  selected
+                >
+                  Pick one subcategory
+                </option>
+                <option>Landscape Painting</option>
+                <option>Portrait Drawing</option>
+                <option>Watercolor Painting</option>
+                <option>Oil Painting</option>
+                <option>Charcoal Sketching</option>
+                <option>Cartoon Drawing</option>
+              </select>
+            </label>
+            {/* <label className='label'>Subcategory Name</label>
             <select
               name='subcategory'
               id='subcategory'
-              defaultValue={subcategory_name}
             >
               <option
-                className='input input-bordered w-full h-full'
+                className='input input-bordered w-full input-group h-full'
                 placeholder='Select Subcategory'
               >
                 Landscape Painting
@@ -119,7 +141,7 @@ const UpdateCraft = () => {
               <option>Oil Painting</option>
               <option>Charcoal Sketching</option>
               <option>Cartoon Drawing</option>
-            </select>
+            </select> */}
           </div>
           <div className='form-control md:w-1/2'>
             <label className='label'>Description</label>
@@ -129,13 +151,13 @@ const UpdateCraft = () => {
                 name='shortDescription'
                 type='text'
                 placeholder='Description'
-                className='input input-bordered w-full'
+                className='input input-bordered w-full text-slate-400'
               />
             </label>
           </div>
         </div>
         {/* form - category and details row */}
-        <div className='md:flex gap-4 mb-6'>
+        <div className='md:flex gap-4 md:mb-6'>
           <div className='form-control md:w-1/2'>
             <label className='label'>Price</label>
             <label className='input-group'>
@@ -144,7 +166,7 @@ const UpdateCraft = () => {
                 name='price'
                 type='text'
                 placeholder='Price'
-                className='input input-bordered w-full'
+                className='input input-bordered w-full text-slate-400'
               />
             </label>
           </div>
@@ -156,28 +178,33 @@ const UpdateCraft = () => {
                 name='rating'
                 type='text'
                 placeholder='Rating'
-                className='input input-bordered w-full'
+                className='input input-bordered w-full text-slate-400'
               />
             </label>
           </div>
         </div>
         {/* form - category and details row */}
-        <div className='md:flex gap-4 mb-6'>
+        <div className='md:flex gap-4 md:mb-6'>
           <div className='form-control md:w-1/2'>
-            <label className='label'>Customization</label>
-            <select
-              defaultValue={customization}
-              name='customization'
-              id='customization'
-            >
-              <option
-                className='input input-bordered w-full h-full'
-                placeholder='Customization'
+            <label className='form-control w-full'>
+              {/* <div className='label'> */}
+              <span className='label'>Customization option</span>
+              {/* </div> */}
+              <select
+                className='select select-bordered'
+                name='customization'
+                defaultValue={customization}
               >
-                Yes
-              </option>
-              <option>No</option>
-            </select>
+                <option
+                  disabled
+                  selected
+                >
+                  Pick one
+                </option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </label>
           </div>
           <div className='form-control md:w-1/2'>
             <label className='label'>Processing Time</label>
@@ -187,28 +214,33 @@ const UpdateCraft = () => {
                 name='processingTime'
                 type='text'
                 placeholder='Processing time'
-                className='input input-bordered w-full'
+                className='input input-bordered w-full text-slate-400'
               />
             </label>
           </div>
         </div>
 
-        <div className='md:flex gap-4 mb-6'>
+        <div className='md:flex gap-4 md:mb-6'>
           <div className='form-control md:w-1/2'>
-            <label className='label'>Stock Status</label>
-            <select
-              defaultValue={stock_status}
-              name='stockStatus'
-              id='stockStatus'
-            >
-              <option
-                className='input input-bordered w-full h-full'
-                placeholder='Select One'
+            <label className='form-control w-full'>
+              {/* <div className='label'> */}
+              <span className='label'>Stock Status</span>
+              {/* </div> */}
+              <select
+                defaultValue={stock_status}
+                className='select select-bordered'
+                name='stockStatus'
               >
-                In Stock
-              </option>
-              <option>Made to Order</option>
-            </select>
+                <option
+                  disabled
+                  selected
+                >
+                  Pick one
+                </option>
+                <option>In stock</option>
+                <option>Made to Order</option>
+              </select>
+            </label>
           </div>
           <div className='form-control md:w-1/2'>
             <label className='label'>Username</label>
@@ -218,29 +250,15 @@ const UpdateCraft = () => {
                 name='name'
                 type='text'
                 placeholder='Username'
-                className='input input-bordered w-full'
+                className='input input-bordered w-full text-slate-400'
               />
             </label>
           </div>
         </div>
-        {/* <div className='mb-6'>
-      <div className='form-control w-full '>
-        <label className='label'>Photo URL</label>
-        <label className='input-group'>
-          <input
-            name='email'
-            type='text'
-            placeholder='Email'
-            className='input input-bordered w-full'
-          />
-        </label>
-      </div>
-    </div> */}
-
         <input
           type='submit'
-          className='btn btn-block bg-black text-white'
-          value='Add Craft'
+          className='btn btn-block mt-8 md:mt-0 bg-orange-800 text-white md:px-4 md:py-2 text-sm rounded-xl hover:bg-yellow-400 border-2 border-white'
+          value='Update Craft'
         />
       </form>
     </div>

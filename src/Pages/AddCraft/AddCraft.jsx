@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
 
@@ -64,14 +64,14 @@ const AddCraft = () => {
   };
 
   return (
-    <div className='bg-[#F4F3F0] p-24 lg:w-1/2 mx-auto h-fit py-3 lg:my-5 border border-yellow-700'>
+    <div className='bg-[#F4F3F0] p-24 lg:w-1/2 mx-auto h-fit py-7 lg:py-3 lg:my-5 border border-yellow-700'>
       <h2 className='text-4xl font-extrabold mb-6 text-center mt-0'>
         Add Craft Item
       </h2>
       <form onSubmit={handleAddCraft}>
         {/* form - name and quantity row */}
-        <div className='md:flex gap-4 lg:mb-6'>
-          <div className='form-control lg:w-1/2'>
+        <div className='md:flex gap-4 md:mb-6'>
+          <div className='form-control md:w-1/2'>
             <label className='label'>Image URL</label>
             <label className='input-group'>
               <input
@@ -82,7 +82,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className='form-control lg:w-1/2'>
+          <div className='form-control md:w-1/2'>
             <label className='label'>Craft Name</label>
             <label className='input-group'>
               <input
@@ -95,8 +95,8 @@ const AddCraft = () => {
           </div>
         </div>
         {/* form - supplier and taste row */}
-        <div className='md:flex gap-4 lg:mb-6'>
-          <div className='form-control lg:w-1/2'>
+        <div className='md:flex gap-4 md:mb-6'>
+          <div className='form-control md:w-1/2'>
             <label className='form-control w-full'>
               {/* <div className='label'> */}
               <span className='label'>Subcategory Name</span>
@@ -111,6 +111,7 @@ const AddCraft = () => {
                 >
                   Pick one subcategory
                 </option>
+                <option>Landscape Painting</option>
                 <option>Portrait Drawing</option>
                 <option>Watercolor Painting</option>
                 <option>Oil Painting</option>
@@ -136,7 +137,7 @@ const AddCraft = () => {
               <option>Cartoon Drawing</option>
             </select> */}
           </div>
-          <div className='form-control lg:w-1/2'>
+          <div className='form-control md:w-1/2'>
             <label className='label'>Description</label>
             <label className='input-group'>
               <input
@@ -149,8 +150,8 @@ const AddCraft = () => {
           </div>
         </div>
         {/* form - category and details row */}
-        <div className='md:flex gap-4 lg:mb-6'>
-          <div className='form-control lg:w-1/2'>
+        <div className='md:flex gap-4 md:mb-6'>
+          <div className='form-control md:w-1/2'>
             <label className='label'>Price</label>
             <label className='input-group'>
               <input
@@ -161,7 +162,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className='form-control lg:w-1/2'>
+          <div className='form-control md:w-1/2'>
             <label className='label'>Rating</label>
             <label className='input-group'>
               <input
@@ -174,8 +175,8 @@ const AddCraft = () => {
           </div>
         </div>
         {/* form - category and details row */}
-        <div className='md:flex gap-4 lg:mb-6'>
-          <div className='form-control lg:w-1/2'>
+        <div className='md:flex gap-4 md:mb-6'>
+          <div className='form-control md:w-1/2'>
             <label className='form-control w-full'>
               {/* <div className='label'> */}
               <span className='label'>Customization option</span>
@@ -195,7 +196,7 @@ const AddCraft = () => {
               </select>
             </label>
           </div>
-          <div className='form-control lg:w-1/2'>
+          <div className='form-control md:w-1/2'>
             <label className='label'>Processing Time</label>
             <label className='input-group'>
               <input
@@ -208,8 +209,8 @@ const AddCraft = () => {
           </div>
         </div>
 
-        <div className='md:flex gap-4 lg:mb-6'>
-          <div className='form-control lg:w-1/2'>
+        <div className='md:flex gap-4 md:mb-6'>
+          <div className='form-control md:w-1/2'>
             <label className='form-control w-full'>
               {/* <div className='label'> */}
               <span className='label'>Stock Status</span>
@@ -229,7 +230,7 @@ const AddCraft = () => {
               </select>
             </label>
           </div>
-          <div className='form-control lg:w-1/2'>
+          <div className='form-control md:w-1/2'>
             <label className='label'>Username</label>
             <label className='input-group'>
               <input
@@ -257,7 +258,7 @@ const AddCraft = () => {
 
         <input
           type='submit'
-          className='btn btn-block mt-8 lg:mt-0 bg-orange-800 text-white md:px-4 md:py-2 text-sm rounded-xl  hover:bg-yellow-400 border-2 border-white'
+          className='btn btn-block mt-8 md:mt-0 bg-orange-800 text-white md:px-4 md:py-2 text-sm rounded-xl hover:bg-yellow-400 border-2 border-white'
           value='Add Craft'
         />
       </form>
