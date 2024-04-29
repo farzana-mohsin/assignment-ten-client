@@ -3,6 +3,7 @@ import Banner from "../../Components/Banner/Banner";
 import ExtraSection from "../../Components/ExtraSection/ExtraSection";
 import SixData from "../../Components/SixData/SixData";
 import Subcategories from "../../Components/Subcategories/Subcategories";
+import Timeline from "../../Components/Timeline/Timeline";
 
 const Home = () => {
   const [subcategories, setSubcategories] = useState([]);
@@ -51,6 +52,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Timeline></Timeline>
       <ExtraSection></ExtraSection>
     </div>
   );

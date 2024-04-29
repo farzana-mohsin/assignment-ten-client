@@ -10,11 +10,13 @@ import CraftDetails from "../Components/CraftDetails/CraftDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateCraft from "../Pages/UpdateCraft/UpdateCraft";
 import Subcategory from "../Pages/Subcategory/Subcategory";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
