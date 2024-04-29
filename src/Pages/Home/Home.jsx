@@ -25,10 +25,10 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <h2 className=' text-3xl md:text-5xl font-bold mt-10 mb-0 lg:my-20 text-center'>
+      <h2 className=' text-3xl md:text-5xl font-bold my-12 text-center'>
         Explore the Collection
       </h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto sm:gap-6 md:gap-0'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto md:gap-8 lg:gap-0'>
         {allItems
           .map((item, index) => (
             <SixData
