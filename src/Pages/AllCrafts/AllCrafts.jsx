@@ -42,7 +42,7 @@ const AllCrafts = () => {
             </td>
             <td className='md:space-x-10 md:gap-10 md:mr-10 '>
               <Link to={`/item-details/${item._id}`}>
-                <button className='btn bg-orange-400 hover:bg-orange-800 text-white md:px-4 md:py-2 border-2 border-white text-sm rounded-xl ml-2'>
+                <button className='btn  hover:bg-yellow-400 bg-orange-800 text-white md:px-4 md:py-2 border-2 border-white text-sm rounded-xl ml-2'>
                   View Details
                 </button>
               </Link>

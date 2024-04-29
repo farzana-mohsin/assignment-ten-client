@@ -11,8 +11,8 @@ const Footer = () => {
               href='#'
               className='flex justify-center space-x-3 lg:justify-start'
             >
-              <div className='flex items-center justify-center w-12 h-12 rounded-full bg-orange-400 text-xl font-bold'>
-                <span className='text-2xl'>
+              <div className='flex items-center justify-center w-12 h-12 rounded-full bg-orange-800 text-xl font-bold'>
+                <span className='text-2xl text-white font-bold'>
                   <FaCrown />
                 </span>
               </div>

@@ -83,7 +83,7 @@ const Navbar = () => {
           <h1 className='animate__animated animate__fadeInLeft text-xl md:text-3xl font-bold text-white pl-1'>
             Crown
           </h1>
-          <div className='flex items-center justify-center text-4xl font-bold text-orange-400 ml-2'>
+          <div className='flex items-center justify-center text-4xl font-bold  text-orange-700 ml-2'>
             <FaCrown />
           </div>
           <h1 className='animate__animated animate__fadeInLeft text-xl md:text-3xl font-bold text-white pl-1'>
@@ -113,7 +113,7 @@ const Navbar = () => {
               </div>
 
               <button
-                className='btn bg-orange-400 text-white md:px-4 md:py-2 border text-sm rounded-xl mr-3'
+                className='btn bg-orange-800 text-white md:px-4 md:py-2 border text-sm rounded-xl mr-3'
                 onClick={() => handleSignOut()}
               >
                 Sign Out
@@ -122,12 +122,12 @@ const Navbar = () => {
           ) : (
             <div className='flex flex-row'>
               <Link to='/login'>
-                <button className='btn  bg-orange-400 text-white md:px-4 md:py-2 border text-sm rounded-xl md:ml-2'>
+                <button className='btn  bg-orange-800 text-white md:px-4 md:py-2 border text-sm rounded-xl md:ml-2 hover:bg-yellow-400'>
                   Login
                 </button>
               </Link>
               <Link to='/register'>
-                <button className='btn  bg-orange-400 text-white md:px-4 md:py-2 border text-sm rounded-xl ml-2 '>
+                <button className='btn  bg-orange-800 text-white md:px-4 md:py-2 border text-sm rounded-xl ml-2  hover:bg-yellow-400'>
                   Register
                 </button>
               </Link>
