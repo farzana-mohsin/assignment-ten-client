@@ -61,7 +61,7 @@ const Register = () => {
       <title>Remax Realty | Register</title>
       {/* </Helmet> */}
 
-      <div className='  md:h-[calc(100vh-295px)] w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-amber-950 bg-opacity-90 text-gray-100 mx-auto my-3'>
+      <div className='  lg:h-[calc(100vh-290px)] w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-amber-950 bg-opacity-90 text-gray-100 mx-auto my-3'>
         <h2 className='mb-3 text-3xl font-semibold text-center'>
           Register here!
         </h2>
@@ -76,9 +76,9 @@ const Register = () => {
         </p>
 
         <div className='flex items-center w-full'>
-          <hr className='w-full text-gray-400' />
-          <p className='px-3 text-gray-400 my-0'>OR</p>
-          <hr className='w-full text-gray-400' />
+          <hr className='w-full text-gray-100' />
+          <p className='px-3 text-gray-100 my-0'>OR</p>
+          <hr className='w-full text-gray-100' />
         </div>
         <form
           onSubmit={handleRegister}
@@ -139,7 +139,7 @@ const Register = () => {
             </span>
           </div>
           <div className='form-control py-3'>
-            <button className='w-full px-8 py-3  font-semibold rounded-xl bg-orange-400 bg-opacity-55  hover:bg-yellow-400'>
+            <button className='w-full px-8 py-3  font-semibold rounded-xl bg-orange-400 bg-opacity-55  hover:bg-yellow-400 border border-white'>
               Register
             </button>
           </div>

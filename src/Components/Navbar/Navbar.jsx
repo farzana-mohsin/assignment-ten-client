@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className='navbar md:px-10 py-5 bg-black mx-auto '>
+      <div className='navbar lg:px-10 py-5 bg-black mx-auto '>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div
@@ -164,7 +164,7 @@ const Navbar = () => {
           </ul>
         </div> */}
 
-        <label className='cursor-pointer grid place-items-center md:ml-6'>
+        <label className='cursor-pointer grid place-items-center ml-6'>
           <input
             onChange={handleToggle}
             type='checkbox'

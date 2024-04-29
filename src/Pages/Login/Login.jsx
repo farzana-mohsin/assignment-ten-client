@@ -141,15 +141,15 @@ const Login = () => {
         </div>
       </div> */}
 
-      <div className='h-screen lg:h-[calc(100vh-240px)] w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-900 text-gray-100 mx-auto my-5'>
+      <div className='lg:h-[calc(100vh-290px)] w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-amber-950 bg-opacity-90 text-gray-100 mx-auto my-3'>
         <h2 className='mb-3 text-3xl font-semibold text-center'>
           Login to your account
         </h2>
-        <p className='text-sm text-center text-gray-400'>
+        <p className='text-sm text-center text-orange-300 mb-5'>
           Dont have an account? Sign up{" "}
           <Link
             to='/register'
-            className='focus:underline hover:underline font-bold text-emerald-400'
+            className='focus:underline hover:underline font-bold text-white'
           >
             here
           </Link>
@@ -159,7 +159,7 @@ const Login = () => {
             onClick={() => handleGoogleSignIn()}
             aria-label='Login with Google'
             type='button'
-            className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-emerald-400 focus:ring-emerald-400'
+            className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-2 border-orange-200 focus:ring-orange-700'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -174,7 +174,7 @@ const Login = () => {
             onClick={() => handleGithubSignIn()}
             aria-label='Login with GitHub'
             role='button'
-            className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 border-emerald-400 focus:ring-emerald-400'
+            className='flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-2 border-orange-200 focus:ring-orange-800'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -187,9 +187,9 @@ const Login = () => {
           </button>
         </div>
         <div className='flex items-center w-full my-2'>
-          <hr className='w-full text-gray-400' />
-          <p className='px-3 text-gray-400 py-0'>OR</p>
-          <hr className='w-full text-gray-400' />
+          <hr className='w-full text-gray-100' />
+          <p className='px-3 text-gray-100 py-0'>OR</p>
+          <hr className='w-full text-gray-100' />
         </div>
         {/* <form
           onSubmit={handleLogIn}
@@ -232,9 +232,9 @@ const Login = () => {
         </form> */}
         <form
           onSubmit={handleLogIn}
-          className='card-body'
+          className='card-body py-0'
         >
-          <div className='form-control pt-0 mt-0 '>
+          <div className='form-control '>
             <label className='label'>
               <span className='label-text text-white'>Email</span>
             </label>
@@ -242,7 +242,7 @@ const Login = () => {
               name='email'
               type='email'
               placeholder='email'
-              className='w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-emerald-400'
+              className='w-full px-3 py-2 border rounded-md  border-orange-400 bg-gray-100 text-gray-900 focus:border-amber-800'
               required
             />
           </div>
@@ -254,13 +254,13 @@ const Login = () => {
               name='password'
               type='password'
               placeholder='password'
-              className='w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-emerald-400'
+              className='w-full px-3 py-2 border rounded-md border-orange-400 bg-gray-100 text-gray-900 focus:border-amber-800'
               required
             />
             <label className='label'></label>
           </div>
           <div className='form-control'>
-            <button className='w-full px-8 py-2 font-semibold rounded-lg bg-emerald-400 text-white'>
+            <button className='w-full px-8 py-3  font-semibold rounded-xl bg-orange-400 bg-opacity-55  hover:bg-yellow-400 border border-white'>
               Login
             </button>
           </div>
