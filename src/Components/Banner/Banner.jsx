@@ -118,7 +118,7 @@ const Banner = () => {
                   A Legendary Community
                 </h1>
                 <p className='mb-5'>
-                  My favourite part of my day is talking to students; it’s so
+                  My favorite part of my day is talking to students; it’s so
                   exciting as each student is completely unique with their own
                   story and their own motivations for taking art classes.
                 </p>
