@@ -64,14 +64,14 @@ const AddCraft = () => {
   };
 
   return (
-    <div className='bg-[#F4F3F0] p-24 w-1/2 mx-auto'>
-      <h2 className='text-4xl font-extrabold mb-10 text-center'>
+    <div className='bg-[#F4F3F0] p-24 lg:w-1/2 mx-auto h-fit py-3 lg:my-5 border border-yellow-700'>
+      <h2 className='text-4xl font-extrabold mb-6 text-center mt-0'>
         Add Craft Item
       </h2>
       <form onSubmit={handleAddCraft}>
         {/* form - name and quantity row */}
-        <div className='md:flex gap-4 mb-6'>
-          <div className='form-control md:w-1/2'>
+        <div className='md:flex gap-4 lg:mb-6'>
+          <div className='form-control lg:w-1/2'>
             <label className='label'>Image URL</label>
             <label className='input-group'>
               <input
@@ -82,7 +82,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className='form-control md:w-1/2'>
+          <div className='form-control lg:w-1/2'>
             <label className='label'>Craft Name</label>
             <label className='input-group'>
               <input
@@ -95,15 +95,36 @@ const AddCraft = () => {
           </div>
         </div>
         {/* form - supplier and taste row */}
-        <div className='md:flex gap-4 mb-6'>
-          <div className='form-control md:w-1/2'>
-            <label className='label'>Subcategory Name</label>
+        <div className='md:flex gap-4 lg:mb-6'>
+          <div className='form-control lg:w-1/2'>
+            <label className='form-control w-full'>
+              {/* <div className='label'> */}
+              <span className='label'>Subcategory Name</span>
+              {/* </div> */}
+              <select
+                className='select select-bordered'
+                name='subcategory'
+              >
+                <option
+                  disabled
+                  selected
+                >
+                  Pick one subcategory
+                </option>
+                <option>Portrait Drawing</option>
+                <option>Watercolor Painting</option>
+                <option>Oil Painting</option>
+                <option>Charcoal Sketching</option>
+                <option>Cartoon Drawing</option>
+              </select>
+            </label>
+            {/* <label className='label'>Subcategory Name</label>
             <select
               name='subcategory'
               id='subcategory'
             >
               <option
-                className='input input-bordered w-full h-full'
+                className='input input-bordered w-full input-group h-full'
                 placeholder='Select Subcategory'
               >
                 Landscape Painting
@@ -113,9 +134,9 @@ const AddCraft = () => {
               <option>Oil Painting</option>
               <option>Charcoal Sketching</option>
               <option>Cartoon Drawing</option>
-            </select>
+            </select> */}
           </div>
-          <div className='form-control md:w-1/2'>
+          <div className='form-control lg:w-1/2'>
             <label className='label'>Description</label>
             <label className='input-group'>
               <input
@@ -128,8 +149,8 @@ const AddCraft = () => {
           </div>
         </div>
         {/* form - category and details row */}
-        <div className='md:flex gap-4 mb-6'>
-          <div className='form-control md:w-1/2'>
+        <div className='md:flex gap-4 lg:mb-6'>
+          <div className='form-control lg:w-1/2'>
             <label className='label'>Price</label>
             <label className='input-group'>
               <input
@@ -140,7 +161,7 @@ const AddCraft = () => {
               />
             </label>
           </div>
-          <div className='form-control md:w-1/2'>
+          <div className='form-control lg:w-1/2'>
             <label className='label'>Rating</label>
             <label className='input-group'>
               <input
@@ -153,23 +174,28 @@ const AddCraft = () => {
           </div>
         </div>
         {/* form - category and details row */}
-        <div className='md:flex gap-4 mb-6'>
-          <div className='form-control md:w-1/2'>
-            <label className='label'>Customization</label>
-            <select
-              name='customization'
-              id='customization'
-            >
-              <option
-                className='input input-bordered w-full h-full'
-                placeholder='Customization'
+        <div className='md:flex gap-4 lg:mb-6'>
+          <div className='form-control lg:w-1/2'>
+            <label className='form-control w-full'>
+              {/* <div className='label'> */}
+              <span className='label'>Customization option</span>
+              {/* </div> */}
+              <select
+                className='select select-bordered'
+                name='customization'
               >
-                Yes
-              </option>
-              <option>No</option>
-            </select>
+                <option
+                  disabled
+                  selected
+                >
+                  Pick one
+                </option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </label>
           </div>
-          <div className='form-control md:w-1/2'>
+          <div className='form-control lg:w-1/2'>
             <label className='label'>Processing Time</label>
             <label className='input-group'>
               <input
@@ -182,23 +208,28 @@ const AddCraft = () => {
           </div>
         </div>
 
-        <div className='md:flex gap-4 mb-6'>
-          <div className='form-control md:w-1/2'>
-            <label className='label'>Stock Status</label>
-            <select
-              name='stockStatus'
-              id='stockStatus'
-            >
-              <option
-                className='input input-bordered w-full h-full'
-                placeholder='Select One'
+        <div className='md:flex gap-4 lg:mb-6'>
+          <div className='form-control lg:w-1/2'>
+            <label className='form-control w-full'>
+              {/* <div className='label'> */}
+              <span className='label'>Stock Status</span>
+              {/* </div> */}
+              <select
+                className='select select-bordered'
+                name='stockStatus'
               >
-                In Stock
-              </option>
-              <option>Made to Order</option>
-            </select>
+                <option
+                  disabled
+                  selected
+                >
+                  Pick one
+                </option>
+                <option>In stock</option>
+                <option>Made to Order</option>
+              </select>
+            </label>
           </div>
-          <div className='form-control md:w-1/2'>
+          <div className='form-control lg:w-1/2'>
             <label className='label'>Username</label>
             <label className='input-group'>
               <input
@@ -226,7 +257,7 @@ const AddCraft = () => {
 
         <input
           type='submit'
-          className='btn btn-block bg-black text-white'
+          className='btn btn-block mt-8 lg:mt-0 bg-orange-800 text-white md:px-4 md:py-2 text-sm rounded-xl  hover:bg-yellow-400 border-2 border-white'
           value='Add Craft'
         />
       </form>
