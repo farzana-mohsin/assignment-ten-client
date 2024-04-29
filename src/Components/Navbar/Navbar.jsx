@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaCrown } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 
 // import { Link } from "react-router-dom";
 

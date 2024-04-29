@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Fade } from "react-awesome-reveal";
 
 const Subcategories = ({ subcategory }) => {
   const { subcategory_name, _id } = subcategory;
@@ -7,8 +8,9 @@ const Subcategories = ({ subcategory }) => {
   return (
     <div className=''>
       <Link to={`/subcategories/${_id}`}>
-        <p className='text-xl hover:bg-amber-600 px-4 py-5 rounded-xl'>
-          {subcategory_name}
+        <p className='text-xl hover:bg-amber-600 px-4 py-5 rounded-xl '>
+          {/* <Fade>{subcategory_name} </Fade> */}
+          <Fade cascade>{subcategory_name}</Fade>
         </p>
       </Link>
     </div>

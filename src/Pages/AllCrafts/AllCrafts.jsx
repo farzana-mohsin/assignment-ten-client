@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-
+import { Fade } from "react-awesome-reveal";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const AllCrafts = () => {
@@ -35,15 +35,15 @@ const AllCrafts = () => {
           >
             <td className='md:space-x-10 md:gap-10 md:mr-10 '>{index + 1}</td>
             <td className='md:space-x-10 md:gap-10 md:mr-10 '>
-              {item.item_name}
+              <Fade cascade>{item.item_name}</Fade>
             </td>
             <td className='md:space-x-10 md:gap-10 md:mr-10 '>
-              {item.subcategory_name}
+              <Fade cascade>{item.subcategory_name}</Fade>
             </td>
             <td className='md:space-x-10 md:gap-10 md:mr-10 '>
               <Link to={`/item-details/${item._id}`}>
                 <button className='btn hover:bg-yellow-400 bg-orange-800 text-white px-4 lg:py-3 border-2 border-white text-sm rounded-xl ml-2'>
-                  View Details
+                  <Fade cascade>View Details</Fade>
                 </button>
               </Link>
             </td>
