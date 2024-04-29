@@ -57,7 +57,7 @@ const AddCraft = () => {
             title: "Success!",
             text: "Item added successfully",
             icon: "success",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Go Back",
           });
         }
       });
