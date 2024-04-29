@@ -113,7 +113,7 @@ const Navbar = () => {
               </div>
 
               <button
-                className='btn bg-orange-800 text-white md:px-4 md:py-2 border text-sm rounded-xl mr-3'
+                className='btn bg-orange-800 hover:bg-yellow-400 text-white md:px-4 md:py-2 border text-sm rounded-xl mr-3'
                 onClick={() => handleSignOut()}
               >
                 Sign Out

@@ -19,7 +19,7 @@ const SixData = ({ item }) => {
           <p>{subcategory_name}</p>
           <div className='card-actions'>
             <Link to={`/item-details/${_id}`}>
-              <button className='btn  px-4 py-2 border text-sm rounded-xl ml-2'>
+              <button className='btn px-4 py-2 bg-orange-100 text-sm rounded-xl ml-2 border border-yellow-800 text-yellow-800 hover:bg-amber-500'>
                 View Details
               </button>
             </Link>
