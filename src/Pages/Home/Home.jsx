@@ -10,13 +10,13 @@ const Home = () => {
   const [allItems, setAllItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("https://assignment-ten-server-lilac.vercel.app/items")
       .then((res) => res.json())
       .then((data) => {
         setAllItems(data);
       });
 
-    fetch("http://localhost:5000/subcategories")
+    fetch("https://assignment-ten-server-lilac.vercel.app/subcategories")
       .then((res) => res.json())
       .then((data) => {
         setSubcategories(data);

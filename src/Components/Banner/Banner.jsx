@@ -11,7 +11,7 @@ import "./styles.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Link } from "react-router-dom";
+
 const Banner = () => {
   // const handleType = (count: number) => {
   //   // access word count number

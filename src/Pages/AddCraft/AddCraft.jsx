@@ -42,7 +42,7 @@ const AddCraft = () => {
     };
     console.log(newCraft);
 
-    fetch("http://localhost:5000/items", {
+    fetch("https://assignment-ten-server-lilac.vercel.app/items", {
       method: "POST",
       headers: {
         "content-type": "application/json",

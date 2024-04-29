@@ -33,7 +33,8 @@ const router = createBrowserRouter([
       {
         path: "/all-items",
         element: <AllCrafts></AllCrafts>,
-        loader: () => fetch("http://localhost:5000/items"),
+        loader: () =>
+          fetch("https://assignment-ten-server-lilac.vercel.app/items"),
       },
       {
         path: "/add-item",
@@ -50,7 +51,8 @@ const router = createBrowserRouter([
             <MyCrafts></MyCrafts>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/items"),
+        loader: () =>
+          fetch("https://assignment-ten-server-lilac.vercel.app/items"),
       },
       {
         path: "/item-details/:id",
@@ -60,7 +62,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/items/${params.id}`),
+          fetch(
+            `https://assignment-ten-server-lilac.vercel.app/items/${params.id}`
+          ),
       },
       {
         path: "/update-craft/:id",
@@ -70,13 +74,17 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/items/${params.id}`),
+          fetch(
+            `https://assignment-ten-server-lilac.vercel.app/items/${params.id}`
+          ),
       },
       {
         path: "/subcategories/:id",
         element: <Subcategory></Subcategory>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/subcategories/${params.id}`),
+          fetch(
+            `https://assignment-ten-server-lilac.vercel.app/subcategories/${params.id}`
+          ),
       },
     ],
   },

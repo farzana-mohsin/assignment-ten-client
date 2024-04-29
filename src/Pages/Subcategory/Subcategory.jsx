@@ -9,7 +9,7 @@ const Subcategory = () => {
   const [subcategoryData, setSubcategoryData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("https://assignment-ten-server-lilac.vercel.app/items")
       .then((res) => res.json())
       .then((data) => {
         const filteredData = data?.filter(

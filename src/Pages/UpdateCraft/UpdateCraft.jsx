@@ -45,7 +45,7 @@ const UpdateCraft = () => {
     };
     console.log(updateCraft);
 
-    fetch(`http://localhost:5000/items/${_id}`, {
+    fetch(`https://assignment-ten-server-lilac.vercel.app/items/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
