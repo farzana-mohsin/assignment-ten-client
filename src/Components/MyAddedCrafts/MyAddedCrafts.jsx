@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { BiCustomize } from "react-icons/bi";
 
 const MyAddedCrafts = ({ item, myItems, setMyItems }) => {
   const { image, item_name, price, rating, customization, stock_status, _id } =

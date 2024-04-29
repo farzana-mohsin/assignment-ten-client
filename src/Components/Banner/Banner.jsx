@@ -25,12 +25,12 @@ const Banner = () => {
   return (
     <div className=' w-full'>
       <Swiper
-        // spaceBetween={30}
-        // centeredSlides={true}
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: false,
-        // }}
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
