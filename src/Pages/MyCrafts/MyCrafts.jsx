@@ -9,14 +9,18 @@ const MyCrafts = () => {
   const [myItems, setMyItems] = useState([]);
 
   useEffect(() => {
-    const filteredItems = loader?.filter((item) => item.email === user?.email);
+    const filteredItems = loader?.filter(
+      (item) => item.user_email === user?.email
+    );
     setMyItems(filteredItems);
   }, [loader, user]);
 
   const handleClick = (event) => {
     const selection = event.target.value;
 
-    let filteredItems = loader?.filter((item) => item.email === user?.email);
+    let filteredItems = loader?.filter(
+      (item) => item.user_email === user?.email
+    );
 
     if (selection === "yes") {
       filteredItems = loader?.filter((item) => item.customization === "Yes");
@@ -37,7 +41,7 @@ const MyCrafts = () => {
         peculiar graceful at really ladies in as elinor opinions age properly
         extended.
       </p>
-      <label className='form-control w-1/2 mx-auto my-12'>
+      <label className='form-control w-1/3 mx-auto my-12'>
         <select
           onChange={handleClick}
           className='select select-bordered  bg-orange-800 text-white md:px-4 md:py-2 border text-sm rounded-xl ml-2  hover:bg-yellow-400'
