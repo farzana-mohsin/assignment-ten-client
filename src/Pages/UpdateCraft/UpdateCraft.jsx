@@ -43,7 +43,6 @@ const UpdateCraft = () => {
       stock_status: stockStatus,
       user_name: name,
     };
-    console.log(updateCraft);
 
     fetch(`https://assignment-ten-server-lilac.vercel.app/items/${_id}`, {
       method: "PUT",
@@ -54,7 +53,6 @@ const UpdateCraft = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount) {
           Swal.fire({
             title: "Success!",

@@ -27,29 +27,31 @@ const AllCrafts = () => {
         place: from the sky, from the earth, from a scrap of paper, from a
         passing shape, and from a spider&apos;s web.
       </p>
-      <div className='bg-orange-100 mx-auto container md:w-1/2 space-x-10 gap-10 table md:text-lg'>
-        {allItems.map((item, index) => (
-          <tr
-            className='md:space-x-10 md:gap-10 md:mr-10'
-            key={index}
-          >
-            <td className='md:space-x-10 md:gap-10 md:mr-10 '>{index + 1}</td>
-            <td className='md:space-x-10 md:gap-10 md:mr-10 '>
-              <Fade cascade>{item.item_name}</Fade>
-            </td>
-            <td className='md:space-x-10 md:gap-10 md:mr-10 '>
-              <Fade cascade>{item.subcategory_name}</Fade>
-            </td>
-            <td className='md:space-x-10 md:gap-10 md:mr-10 '>
-              <Link to={`/item-details/${item._id}`}>
-                <button className='btn hover:bg-yellow-400 bg-orange-800 text-white px-4 lg:py-3 border-2 border-white text-sm rounded-xl ml-2'>
-                  <Fade cascade>View Details</Fade>
-                </button>
-              </Link>
-            </td>
-          </tr>
-        ))}
-      </div>
+      <table className='bg-orange-100 mx-auto container md:w-1/2 space-x-10 gap-10 table md:text-lg'>
+        <tbody>
+          {allItems.map((item, index) => (
+            <tr
+              className='md:space-x-10 md:gap-10 md:mr-10'
+              key={index}
+            >
+              <td className='md:space-x-10 md:gap-10 md:mr-10 '>{index + 1}</td>
+              <td className='md:space-x-10 md:gap-10 md:mr-10 '>
+                <Fade cascade>{item.item_name}</Fade>
+              </td>
+              <td className='md:space-x-10 md:gap-10 md:mr-10 '>
+                <Fade cascade>{item.subcategory_name}</Fade>
+              </td>
+              <td className='md:space-x-10 md:gap-10 md:mr-10 '>
+                <Link to={`/item-details/${item._id}`}>
+                  <button className='btn hover:bg-yellow-400 bg-orange-800 text-white px-4 lg:py-3 border-2 border-white text-sm rounded-xl ml-2'>
+                    <Fade cascade>View Details</Fade>
+                  </button>
+                </Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

@@ -7,7 +7,6 @@ const MyAddedCrafts = ({ item, myItems, setMyItems }) => {
     item;
 
   const handleDelete = (_id) => {
-    console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -23,7 +22,6 @@ const MyAddedCrafts = ({ item, myItems, setMyItems }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",

@@ -23,9 +23,13 @@ const MyCrafts = () => {
     );
 
     if (selection === "yes") {
-      filteredItems = loader?.filter((item) => item.customization === "Yes");
+      filteredItems = filteredItems?.filter(
+        (item) => item.customization === "Yes"
+      );
     } else if (selection === "no") {
-      filteredItems = loader?.filter((item) => item.customization === "No");
+      filteredItems = filteredItems?.filter(
+        (item) => item.customization === "No"
+      );
     }
 
     setMyItems(filteredItems);
@@ -41,10 +45,10 @@ const MyCrafts = () => {
         peculiar graceful at really ladies in as elinor opinions age properly
         extended.
       </p>
-      <label className='form-control w-1/3 mx-auto my-12'>
+      <label className='form-control w-1/4 mx-auto my-12'>
         <select
           onChange={handleClick}
-          className='select select-bordered  bg-orange-800 text-white md:px-4 md:py-2 border text-sm rounded-xl ml-2  hover:bg-yellow-400'
+          className='select select-bordered bg-orange-800 text-white md:px-4 md:py-2 border text-sm rounded-xl ml-2 hover:bg-yellow-400'
           name='stockStatus'
         >
           <option

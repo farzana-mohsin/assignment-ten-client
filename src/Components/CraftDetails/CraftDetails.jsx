@@ -5,15 +5,12 @@ const CraftDetails = () => {
   const {
     image,
     item_name,
-    subcategory_name,
     short_description,
     price,
     rating,
     customization,
     processing_time,
     stock_status,
-    user_name,
-    user_email,
   } = loader;
 
   return (

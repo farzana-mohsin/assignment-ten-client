@@ -17,21 +17,18 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
 
     setLoginError("");
     setLoginSuccess("");
 
     login(email, password)
       .then(() => {
-        // console.log(result.user);
         toast.success("You have logged in successfully!");
         setTimeout(function () {
           navigate(from);
         }, 2000);
       })
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
         toast.error("Credentials don't match, please try again");
       });
 

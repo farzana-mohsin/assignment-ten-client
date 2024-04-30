@@ -25,7 +25,6 @@ const AddCraft = () => {
     const stockStatus = form.stockStatus.value;
     const name = form.name.value;
     const email = user.email;
-    console.log(user);
 
     const newCraft = {
       image,
@@ -40,7 +39,6 @@ const AddCraft = () => {
       user_name: name,
       user_email: email,
     };
-    console.log(newCraft);
 
     fetch("https://assignment-ten-server-lilac.vercel.app/items", {
       method: "POST",
@@ -51,7 +49,6 @@ const AddCraft = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",

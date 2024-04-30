@@ -8,9 +8,9 @@ const Subcategories = ({ subcategory }) => {
   return (
     <div className=''>
       <Link to={`/subcategories/${_id}`}>
-        <p className='text-xl hover:bg-amber-600 px-4 py-5 rounded-xl '>
+        <div className='text-xl hover:bg-amber-600 px-4 py-5 rounded-xl'>
           <Fade cascade>{subcategory_name}</Fade>
-        </p>
+        </div>
       </Link>
     </div>
   );
