@@ -9,18 +9,14 @@ const MyCrafts = () => {
   const [myItems, setMyItems] = useState([]);
 
   useEffect(() => {
-    const filteredItems = loader?.filter(
-      (item) => item.user_email === user?.email
-    );
+    const filteredItems = loader?.filter((item) => item.email === user?.email);
     setMyItems(filteredItems);
   }, [loader, user]);
 
   const handleClick = (event) => {
     const selection = event.target.value;
 
-    let filteredItems = loader?.filter(
-      (item) => item.user_email === user?.email
-    );
+    let filteredItems = loader?.filter((item) => item.email === user?.email);
 
     if (selection === "yes") {
       filteredItems = loader?.filter((item) => item.customization === "Yes");
