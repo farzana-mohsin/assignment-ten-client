@@ -18,7 +18,9 @@ const MyCrafts = () => {
   const handleClick = (event) => {
     const selection = event.target.value;
 
-    let filteredItems = loader;
+    let filteredItems = loader?.filter(
+      (item) => item.user_email === user?.email
+    );
 
     if (selection === "yes") {
       filteredItems = loader?.filter((item) => item.customization === "Yes");
