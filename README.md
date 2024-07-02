@@ -29,3 +29,11 @@ This project is a web application that allows users to browse through an arts an
 - Mobile and tablet friendly: The web application is responsive and optimized for mobile devices, allowing users to manage tasks on the go.
 - Firebase config keys have been transferred to .env.local file.
 - MongoDB username and password have been transferred to .env file with encrypted code.
+## Steps to clone a project
+- On GitHub.com, navigate to the main page of the repository
+- Above the list of files, click  Code
+- Copy the URL for the repository. To clone a repository using GitHub CLI, click GitHub CLI, then click the double boxes
+- Open Terminal
+- Change the current working directory to the location where you want the cloned directory
+- Type git clone, and then paste the URL you copied earlier
+- Press Enter to create your local clone
