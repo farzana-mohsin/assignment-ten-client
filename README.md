@@ -11,9 +11,9 @@ This project is a web application that allows users to browse through an arts an
 
 ## Key Features
 
-- User authentication: The application allows users to create accounts and log in to access their tasks and settings.
+- User authentication: The application allows users to create accounts and log in to access their tasks and settings. Firebase is used to handle the authentication.
   - The register and login have multiple credentials which are shown by toasts.
-  - User can also login via their Google or Github accounts.
+  - User can also log in via their Google or Github accounts.
 - Navbar, Banner, All Arts & Crafts, and Footer sections are publicly available.
 - The Homepage features the banner, six cards of arts and crafts and two extra sections
   - Two extra sections are Exhibitions & Events and Our Activities & Achievements
